@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+       <!--配置事务-->
+   <!-- <bean id="dataSourceTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+
+    </bean>-->
+
+    <!--配置通知-->
+  <!--  <tx:advice id="txAdvice" transaction-manager="dataSourceTransactionManager">
+        <tx:attributes >
+            <tx:method name="get*" timeout="1000" isolation="READ_COMMITTED" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>-->
+
+    <!--配置将通知切入到相应的位置-->
+  <!--  <aop:config>
+        <aop:pointcut id="dbOp" expression="execution(* com.wgc.persons.service.impl.PersonsServiceImpl.*(..))"/>
+        <aop:advisor advice-ref="txAdvice"  pointcut-ref="dbOp"/>
+    </aop:config>-->
+</beans>
